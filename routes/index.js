@@ -4,6 +4,14 @@ const router = express.Router();
 const PagesController = require('../controllers/PagesController');
 const AppController = require('../controllers/AppController');
 
+
+function myMiddleware(req, res, next) {
+    console.log('router middleware');
+    next();
+}
+
+router.use(myMiddleware);
+
 router.get('/', PagesController.home);
 
 router.get('/contact', (res, req) => {
