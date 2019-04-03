@@ -6,3 +6,7 @@ app.get('/', (req, res, next) => {
         'status': 'Server init'
     })
 });
+
+app.listen(8080, () => {
+    console.log('listening');
+})
