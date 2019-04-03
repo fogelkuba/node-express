@@ -4,5 +4,5 @@ app.set('port', process.env.PORT || 8080);
 
 const server = app.listen(app.get('port'), () => {
     console.log(`listening on ${server.address().port}`);
-    console.log(server);
+    // console.log(server);
 });
