@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const flash = require('connect-flash');
 
 const app = express();
 
@@ -12,6 +13,8 @@ app.set(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extend: true}));
 app.use(cookieParser());
+
+app.use(flash());
 
 module.exports = app;
 
