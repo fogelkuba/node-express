@@ -4,5 +4,6 @@ exports.store = (req, res) => {
     //     'phone': req.body.phone,
     //     'message': req.body.message
     // })
+
     res.flash('form', 'You are a Hero!')
 };
